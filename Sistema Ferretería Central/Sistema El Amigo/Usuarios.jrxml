@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="712d4750-8207-4241-bd9c-41ee21fa3fe7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     login1.`idlogin1` AS login1_idlogin1,
+     login1.`Nombre` AS login1_Nombre,
+     login1.`Contraseña` AS login1_Contraseña,
+     login1.`Rol` AS login1_Rol
+FROM
+     `login1` login1]]>
+	</queryString>
+	<field name="login1_idlogin1" class="java.lang.Integer"/>
+	<field name="login1_Nombre" class="java.lang.String"/>
+	<field name="login1_Contraseña" class="java.lang.String"/>
+	<field name="login1_Rol" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="138" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="456" y="35" width="100" height="20" uuid="754a8043-5393-45c4-b9ba-9dd644818906"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="228" y="95" width="100" height="20" uuid="25c2b24a-d551-44c1-9dd0-a52c0c59132d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Tel: 4035-25-73]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="159" y="55" width="239" height="20" uuid="2087618f-14e8-4749-97ad-259761033af5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Zona 1, Las Cruces, Petén, Guatemala]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="157" y="10" width="243" height="45" uuid="8f8c32cc-e8e7-43cf-a41c-dad9d6f69760"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ferretería El Amigo]]></text>
+			</staticText>
+			<image>
+				<reportElement x="29" y="10" width="121" height="124" uuid="a2bee879-45c9-487e-be59-cb15940d77a0"/>
+				<imageExpression><![CDATA["C:\\Users\\aldoy\\OneDrive\\Escritorio\\Netbeans con java\\SistemaInventario_1\\src\\Imagenes\\FerreteríaPequeño.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="228" y="75" width="100" height="20" uuid="292549f1-fae9-4121-817b-e2d431c0bc59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[4789627-2]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="196" y="0" width="163" height="35" uuid="808af719-adaa-4dac-b152-8d8a5f0f6cdd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Usuarios registrados]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="67" y="0" width="75" height="20" uuid="cf01f91c-f3df-437a-b874-f7023101459c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="142" y="0" width="128" height="20" uuid="f9feba44-922a-44e3-8520-e96fc2fa1e82"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="0" width="117" height="20" uuid="e26dd5b9-e43a-469b-8709-e8f1dbec62a3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contraseña]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="0" width="100" height="20" uuid="a9362c6d-c9a0-437f-8a75-f1b130d919ee"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rol]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="270" y="0" width="116" height="20" uuid="7c14a68d-6728-4515-85aa-4503de0b98fe"/>
+				<textFieldExpression><![CDATA[$F{login1_Contraseña}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="385" y="1" width="100" height="20" uuid="d246ccda-cbb7-4ae4-a15f-ab5f9b754893"/>
+				<textFieldExpression><![CDATA[$F{login1_Rol}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="69" y="1" width="75" height="20" uuid="0bf5ea54-bbef-4b86-bfc5-abd32130226d"/>
+				<textFieldExpression><![CDATA[$F{login1_idlogin1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="1" width="128" height="20" uuid="c7b04051-847f-429d-830e-8393ab945dfb"/>
+				<textFieldExpression><![CDATA[$F{login1_Nombre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="218" y="16" width="80" height="20" uuid="d614e3c1-113a-479a-b0f8-0653217894ac"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="298" y="16" width="40" height="20" uuid="0c80474f-5a67-4101-b921-f49aa394fbce"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="226" pageHeight="368" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7a921f72-eff9-4476-95c3-ee9568c5e804">
+	<property name="ireport.zoom" value="3.138428376721004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="codigo" class="java.lang.String"/>
+	<field name="producto" class="java.lang.String"/>
+	<field name="cantidad" class="java.lang.String"/>
+	<field name="preciou" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement x="21" y="0" width="145" height="28" uuid="a5cb2098-e5f1-4cb0-9b8d-e7ec050aab72"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ferretería El Amigo]]></text>
+			</staticText>
+			<image>
+				<reportElement x="16" y="0" width="59" height="28" uuid="bb59c581-1a84-43aa-b29f-8d7fea5e78cd"/>
+				<imageExpression><![CDATA["C:\\Imágenes de Sistema de Ferretería El Amigo\\FerreteríaPequeño.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="43" y="28" width="100" height="10" uuid="f5866938-5a24-41ec-ab4b-eeb022bbe63f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Nit: 4789627-2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="38" width="100" height="10" uuid="8a0c508e-a90d-414b-8d89-c97e6a83f3df"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Tel: 4035-2573]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="17" splitType="Stretch">
+			<staticText>
+				<reportElement x="43" y="0" width="100" height="14" uuid="5417ad76-90e8-4eb0-9435-1de2992d1ce1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ticket de Venta]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="38" y="0" width="92" height="20" uuid="fd8a6714-73b8-4fba-bdc3-849e54793565"/>
+				<textElement>
+					<font fontName="Modern No. 20" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="38" height="20" uuid="e8bd4191-cffa-4f07-9ec9-b06189fa2857"/>
+				<textElement>
+					<font fontName="Modern No. 20" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="0" width="29" height="20" uuid="bcc69a08-6459-45d2-948f-c67e0e06bdc1"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="148" y="0" width="38" height="20" uuid="a0fd26d8-a7d5-498b-a0a0-34f11d0af20b"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="28" height="19" uuid="52875a78-09f5-40c4-a1a6-99c3e5773a35"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="0" width="29" height="19" uuid="e685c9b4-c479-4afe-962f-cb699b1e57c3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{preciou}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="28" y="0" width="58" height="19" uuid="60246575-81e7-4ffc-9bec-f86f0d9ab079"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="148" y="0" width="38" height="19" uuid="98bbb1db-0fd5-444f-acfa-27e746aa8c88"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="19" width="186" height="1" uuid="0559e12d-e107-4dbe-b032-61727dad698e"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="16" y="10" width="154" height="12" uuid="8ee0f684-053f-479d-b732-bab556b12316"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA["El Amigo de tu economía"]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="15" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="108" y="0" width="78" height="13" uuid="ba60273d-ce97-4f91-a857-0a16bb20ff15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
